@@ -21,6 +21,12 @@
       <br />
       <button type="submit">Update Profile</button>
     </form>
+    <!-- delete user -->
+    <form id="delete-user-form">
+      <label for="username">Username:</label>
+      <input type="text" id="other-username" name="username" required />
+      <button type="submit">Delete User</button>
+    </form>
 
     <script>
       async function loadUserProfile() {
@@ -37,7 +43,6 @@
         document.getElementById("contact_number").value = user.contact_number;
         document.getElementById("email").value = user.email;
       }
-
       document
         .getElementById("profile-form")
         .addEventListener("submit", async function (event) {
@@ -62,6 +67,31 @@
           }
         });
 
+      // delete user
+      document
+        .getElementById("delete-user-form")
+        .addEventListener("submit", (event) => {
+          event.preventDefault();
+          const username = document.getElementById("other-username").value;
+
+          try {
+            const response = fetch("http://127.0.0.1:4001/auth/delete/user", {
+              method: "PUT",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ username }),
+              credentials: "include",
+            });
+            const result = response.json();
+            if (result.ok) {
+              alert("User deleted successfully");
+              window.location.href = "./index.html";
+            } else {
+              alert(result.message);
+            }
+          } catch (err) {
+            console.log(err);
+          }
+        });
       loadUserProfile();
     </script>
   </body>

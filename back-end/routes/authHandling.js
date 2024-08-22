@@ -17,5 +17,12 @@ router.get("/user", authentication, authorisation("user"), (req, res) =>
 router.put("/user", authentication, authorisation("user"), (req, res) =>
   authController.update_user_profile(req, res)
 );
+// delete user by username
+router.put(
+  "/delete/user",
+  authentication,
+  authorisation({ isAdmin: false }),
+  (req, res) => authController.delete_user_by_username(req, res)
+);
 
 module.exports = router;

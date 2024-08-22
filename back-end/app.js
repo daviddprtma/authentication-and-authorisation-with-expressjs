@@ -1,5 +1,3 @@
-require("dotenv").config();
-
 ("use strict");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -53,6 +51,5 @@ app.use("/admin", require("./routes/adminHandling"));
 var server = app.listen(PORT, () => {
   console.info(`Server is running on port ${PORT}`);
 });
-
 
 app.use(cookieParser(process.env.TOKEN_KEY));
