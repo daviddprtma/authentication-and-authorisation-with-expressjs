@@ -181,7 +181,7 @@ const delete_user_by_username = async (req, res) => {
   try {
     const { username } = req.body;
 
-    // Check if the user exists
+    // check user exists
     const user = await UserModel.findOne({
       where: {
         username: username,
@@ -192,16 +192,14 @@ const delete_user_by_username = async (req, res) => {
       return res.status(404).json({ message: "User not found", ok: false });
     }
 
-    // Delete the user
+    // Delete user
     await UserModel.destroy({
       where: {
         username: username,
       },
     });
 
-    return res
-      .status(204)
-      .json({ message: `${username} is deleted`, ok: true });
+    return res.status(200).json({ message: `user is deleted`, ok: true });
   } catch (error) {
     console.log(error);
     return res.status(500).json({ message: "Server Error", ok: false });

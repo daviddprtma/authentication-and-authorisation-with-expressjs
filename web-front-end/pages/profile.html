@@ -82,7 +82,7 @@
               credentials: "include",
             });
             const result = response.json();
-            if (result.ok) {
+            if (result.status == 200) {
               alert("User deleted successfully");
               window.location.href = "./index.html";
             } else {
