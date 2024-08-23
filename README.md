@@ -4,7 +4,7 @@
 
 <h3 align="center">Authentication and Authorization With Express JS</h3>
 <p align="center">
-This repository is about how to we can make authentication and authorization using express js
+This repository is about how we can make authentication and authorization using express js
 
 
   
