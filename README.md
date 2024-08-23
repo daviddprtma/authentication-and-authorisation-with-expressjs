@@ -27,6 +27,8 @@ To make it more understanding, here is the diagram for the authentication and au
 <br>
 <img src="https://github.com/daviddprtma/authentication-and-authorisation-with-expressjs/blob/main/jwt.png" style="width: 500px;"/>
 
+Here's my video presentation to make it more depth known about this bounty challenge for authentication & authorization using expressjs https://drive.google.com/file/d/15WziX0TM2nor2gZ6YWACQg3N-rjh5Ho-/view?usp=sharing
+
 ### Built With
 
 - [Express JS](https://expressjs.com/)
