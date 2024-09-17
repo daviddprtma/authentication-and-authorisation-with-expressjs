@@ -2,14 +2,10 @@
 <br/>
 <div align="center">
 
-<h3 align="center">Authentication and Authorization With Express JS</h3>
+<h3 align="center">Winner #1 The Best Bounty Project Authentication and Authorization With Express JS</h3>
 <p align="center">
 This repository is about how we can make authentication and authorization using express js
-
-
-  
-
-
+  For the list of the bounty winners, you can check it in here https://discord.com/channels/895564164783808523/895570285800062977/1285543418831044630
 </p>
 </div>
 
